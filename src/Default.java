@@ -1,12 +1,12 @@
 public class Default extends Character {
 
     private String job;
-    Menu Menu = new Menu();
+    Method method = new Method();
 
     public Default() {
         super("Captain Noob", "noobImage");
-            setPower(Menu.getRandom(10, 15));
-            setHealth(Menu.getRandom(10, 15));
+            setPower(method.getRandom(10, 15));
+            setHealth(method.getRandom(10, 15));
             System.out.println("Création de Captain Noob!");
             job = "Super Noob";
     }

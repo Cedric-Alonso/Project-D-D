@@ -5,21 +5,21 @@ public class Guerrier extends Character {
 //
     private String job;
     private Arme arme;
-    Menu Menu = new Menu();
+    Method method = new Method();
 
     public Guerrier(String pName, String pImage, int pArme){
         super(pName, pImage);
-        setPower(Menu.getRandom(5,10));
-        setHealth(Menu.getRandom(5,10));
+        setPower(method.getRandom(5,10));
+        setHealth(method.getRandom(5,10));
         System.out.println("Création d'un Guerrier!");
          job = "guerrier";
-         arme = Menu.ChooseArme(pArme);
+         arme = method.ChooseArme(pArme);
     }
     public Guerrier(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pArme){
         super(pName, pImage ,pLevel ,pStrength ,pHealth);
         System.out.println("Création d'un Guerrier !");
         job = "super guerrier";
-        arme = Menu.ChooseArme(pArme);
+        arme = method.ChooseArme(pArme);
     }
 
     public String getJob() {
@@ -30,7 +30,7 @@ public class Guerrier extends Character {
     public String toString() {
         return super.toString() +
                 "Class: " + job + '\n'+
-                "Arme{"+arme.getName()+": "+arme.getPower()+" dégats}"+"\n";
+                "Arme{"+arme.getName()+": "+arme.getStat()+" dégats}"+"\n";
     }
 
     @Override

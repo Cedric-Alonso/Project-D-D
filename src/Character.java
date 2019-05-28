@@ -1,19 +1,22 @@
+import java.util.ArrayList;
+
 public abstract class Character {
     private String name, image,job;
     private int level, power, health;
-
-    public Character(String pName, String pImage) {
+    ArrayList<Object> inventory = new ArrayList<>();
+    protected Character(String pName, String pImage) {
         name = pName;
         image = pImage;
         level = 1;
     }
 
-    public Character(String pName, String pImage, int pLevel, int pPower, int pHealth) {
+    protected Character(String pName, String pImage, int pLevel, int pPower, int pHealth) {
         name = pName;
         image = pImage;
         level = pLevel;
         power = pPower;
         health = pHealth;
+        inventory = null;
     }
 
     public void setPower(int pPower) {

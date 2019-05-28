@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         boolean exit;
-        Menu Menu = new Menu();
-        Menu.Intro();
+        Game game = new Game();
+        Players players = new Players();
+        Menu menu = new Menu(players, game);
+        menu.Intro();
         do {
-            exit = Menu.Choose();
+            exit = menu.Choose();
         } while(!exit);
     }
 

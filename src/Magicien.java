@@ -3,21 +3,21 @@ public class Magicien extends Character {
 
     private String job;
     private Spell spell;
-    Menu Menu = new Menu();
+    Method method = new Method();
 
     public Magicien(String pName, String pImage, int pSpell) {
         super(pName, pImage);
-        setPower(Menu.getRandom(8, 15));
-        setHealth(Menu.getRandom(3, 6));
+        setPower(method.getRandom(8, 15));
+        setHealth(method.getRandom(3, 6));
         System.out.println("Création d'un Magicien!");
         job = "magicien";
-        spell = Menu.ChooseSpell(pSpell);
+        spell = method.ChooseSpell(pSpell);
     }
 
     public Magicien(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pSpell) {
         super(pName, pImage, pLevel, pStrength, pHealth);
         job = "super magicien";
-        spell = Menu.ChooseSpell(pSpell);
+        spell = method.ChooseSpell(pSpell);
     }
 
     public String getJob() {
@@ -28,7 +28,7 @@ public class Magicien extends Character {
     public String toString() {
         return super.toString() +
                 "Class: " + job + '\n' +
-                "Sort{" + spell.getName() + ": " + spell.getPower() + " dégats}" + "\n";
+                "Sort{" + spell.getName() + ": " + spell.getStat() + " dégats}" + "\n";
     }
 
     @Override
