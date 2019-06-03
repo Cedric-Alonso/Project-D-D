@@ -1,4 +1,4 @@
-public class Guerrier extends Character {
+public class Warrior extends Character {
 
 
 //    private int level,strength, health;
@@ -7,7 +7,7 @@ public class Guerrier extends Character {
     private Arme arme;
     Method method = new Method();
 
-    public Guerrier(String pName, String pImage, int pArme){
+    public Warrior(String pName, String pImage, int pArme){
         super(pName, pImage);
         setPower(method.getRandom(5,10));
         setHealth(method.getRandom(5,10));
@@ -15,7 +15,7 @@ public class Guerrier extends Character {
          job = "guerrier";
          arme = method.ChooseArme(pArme);
     }
-    public Guerrier(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pArme){
+    public Warrior(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pArme){
         super(pName, pImage ,pLevel ,pStrength ,pHealth);
         System.out.println("Création d'un Guerrier !");
         job = "super guerrier";

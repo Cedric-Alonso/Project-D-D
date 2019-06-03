@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Square {
-    Method method = new Method();
+    private Method method = new Method();
     public Square(int id, int playerId, Players players){
         int ennemy,object, numberId=0;
         Character player = players.getPlayers().get(playerId);
@@ -22,5 +22,9 @@ public class Square {
                 object = 0;
             }
         }
+    }
+
+    public Square getSquare(ArrayList plateau){
+        return plateau.get(0);
     }
 }

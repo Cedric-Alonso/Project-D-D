@@ -1,11 +1,11 @@
-public class Magicien extends Character {
+public class Magician extends Character {
 //    private int level=0,strength=0, health = 0;
 
     private String job;
     private Spell spell;
     Method method = new Method();
 
-    public Magicien(String pName, String pImage, int pSpell) {
+    public Magician(String pName, String pImage, int pSpell) {
         super(pName, pImage);
         setPower(method.getRandom(8, 15));
         setHealth(method.getRandom(3, 6));
@@ -14,7 +14,7 @@ public class Magicien extends Character {
         spell = method.ChooseSpell(pSpell);
     }
 
-    public Magicien(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pSpell) {
+    public Magician(String pName, String pImage, int pLevel, int pStrength, int pHealth, int pSpell) {
         super(pName, pImage, pLevel, pStrength, pHealth);
         job = "super magicien";
         spell = method.ChooseSpell(pSpell);

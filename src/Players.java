@@ -37,7 +37,7 @@ public class Players {
                 System.out.println("Crée " + name + "?(y/n)");
                 if (method.TrueFalse()) {
 
-                    PlayerCreate = new Guerrier(name, image, weapon);
+                    PlayerCreate = new Warrior(name, image, weapon);
                 } else {
                     PlayerCreate = null;
                 }
@@ -54,7 +54,7 @@ public class Players {
                 }
                 System.out.println("Crée " + name + "?(y/n)");
                 if (method.TrueFalse()) {
-                    PlayerCreate = new Magicien(name, image, spell);
+                    PlayerCreate = new Magician(name, image, spell);
                 } else {
                     PlayerCreate = null;
                 }
@@ -78,10 +78,10 @@ public class Players {
                 System.out.println("Crée " + name + "?(y/n)");
                 if (method.TrueFalse()) {
                     if (level <= 10 && strength <= 100 && health <= 100) {
-                        PlayerCreate = new Guerrier(name, image, level, strength, health, weapon);
+                        PlayerCreate = new Warrior(name, image, level, strength, health, weapon);
 
                     } else {
-                        PlayerCreate = new Guerrier(name, image, 0, 1, 1, 0);
+                        PlayerCreate = new Warrior(name, image, 0, 1, 1, 0);
                     }
                 } else {
                     PlayerCreate = null;
@@ -106,9 +106,9 @@ public class Players {
                 System.out.println("Crée " + name + "?(y/n)");
                 if (method.TrueFalse()) {
                     if (level <= 10 && strength <= 100 && health <= 100) {
-                        PlayerCreate = new Magicien(name, image, level, strength, health, spell);
+                        PlayerCreate = new Magician(name, image, level, strength, health, spell);
                     } else {
-                        PlayerCreate = new Magicien(name, image, 0, 1, 1, 0);
+                        PlayerCreate = new Magician(name, image, 0, 1, 1, 0);
                     }
                 } else {
                     PlayerCreate = null;
